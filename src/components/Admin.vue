@@ -77,4 +77,3 @@ pedidos()
 
 </template>
 
-
