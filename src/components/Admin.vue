@@ -11,7 +11,7 @@ const pedidos = async () => {
   try {
     const response = await axios.get(API_URL, {
       headers: {
-        Authorization: Bearer ${store.token}
+        Authorization: `Bearer ${store.token}`
       }
     });
     data.value = response.data.pedidos;
@@ -22,11 +22,11 @@ const pedidos = async () => {
 }
 
 const actualizarEstado = async (pedidoId, nuevoEstado) => {
-  const API_URL = http://127.0.0.1:8000/api/pedidos/${pedidoId}
+  const API_URL = `http://127.0.0.1:8000/api/pedidos/${pedidoId}`
   try {
     const response = await axios.put(API_URL, { Estado: nuevoEstado }, {
       headers: {
-        Authorization: Bearer ${store.token},
+        Authorization: `Bearer ${store.token}`,
         'Content-Type': 'application/json'  // Asegura el tipo de contenido
       }
     });
@@ -76,6 +76,7 @@ pedidos()
   </div>
 
 </template>
+
 
 
 
